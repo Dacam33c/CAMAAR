@@ -21,7 +21,7 @@ Lucas da Costa Rodrigues - 221017079
 ### Visualização e download dos questionarios pelos professores
 ### disponibilização sequencial das ferramentas na tela de gerenciamento
 
-detalhamento das funcionalidades nas historias de usuário.
+*detalhamento das funcionalidades nas historias de usuário.
 
 ## Política de branching:
 ### branch por funcionalidade
