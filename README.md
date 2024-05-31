@@ -7,8 +7,8 @@ Lucas da Costa Rodrigues - 221017079
 
 # SPRINT 1
 
-### Scrum Master:
-### Product Owner:
+### Scrum Master: Lucas da Costa
+### Product Owner: João Pedro
 
 # Funcionalidades:
 
