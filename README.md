@@ -12,11 +12,11 @@ Lucas da Costa Rodrigues - 221017079
 
 # Funcionalidades:
 
-## Importação da base de dados por meio de um arquivo JSON
-## Envio de email aos alunos para solicitar o cadastro da senha
-## Tela de login para os alunos e professores
-## Criação de templates de questionários para os professores
-## Envio dos questionário para os alunos de acordo com as suas turmas
-## Respostar dos alunos aos questionários
-## Visualização e download dos questionarios pelos professores
-## disponibilização sequencial das ferramentas na tela de gerenciamento
+### Importação da base de dados por meio de um arquivo JSON
+### Envio de email aos alunos para solicitar o cadastro da senha
+### Tela de login para os alunos e professores
+### Criação de templates de questionários para os professores
+### Envio dos questionário para os alunos de acordo com as suas turmas
+### Respostar dos alunos aos questionários
+### Visualização e download dos questionarios pelos professores
+### disponibilização sequencial das ferramentas na tela de gerenciamento
