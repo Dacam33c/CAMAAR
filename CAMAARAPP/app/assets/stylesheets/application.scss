@@ -15,13 +15,13 @@
  */
 
  @import "bootstrap";
-
+/*colocar a tela como preta e as letras como branco*/
  body {
     background-color: #020202;
 
     color: white; 
   }
-
+/* modifica a aparencia das informaçoes a serem preechidas: coloca em uma caixa no centro da tela*/
   .login-container {
     max-width: 400px; 
     margin: 0 auto;
@@ -39,7 +39,7 @@
     text-align: center; 
     margin-bottom: 10px; 
   }
-  
+  /* Modiica aparencia das caixas de texto*/
   .field input[type="text"],
   .field input[type="email"],
   .field input[type="password"] {
@@ -65,7 +65,7 @@
   .actions {
     text-align: center; 
   }
-  
+  /* Botão de ação*/
   .actions input[type="submit"] {
     background-color: #00ff4c; 
     color: rgb(0, 0, 0); 
@@ -84,7 +84,7 @@
     background-color: #085c00; 
 
   }
-
+/* redirecionamentos. Ex: Esqueci a senha*/
   .login-links {
     display: flex; 
     justify-content: space-between;
@@ -101,7 +101,7 @@
     text-decoration: underline;
     color:  #00ff4c; 
   }
-
+/* Modifica a forma como Aparece alertas*/
   .notice,
   .alert {
     position: fixed; 
@@ -136,7 +136,7 @@
   .alert {
     animation: slideIn 0.5s ease-out;
   }
-
+/* Customizar o formato dos Botões*/
   .btn-custom {
     background-color: #00ff4c; 
     color: rgb(0, 0, 0); 
