@@ -18,8 +18,9 @@ class TelasController < ApplicationController
 
           lista_alunos = turma["dicente"]
           lista_alunos.each do |aluno|
-            if !Aluno.exists?(matricula: aluno["matricula"] ) #checa se o aluno ja existe pela matricula e cadastra ele caso não exista
-              cria_aluno = Aluno.new(nome:aluno["nome"], curso:aluno["curso"], matricula:aluno["matricula"], usuario:aluno["usuario"], formacao:aluno["formacao"], ocupacao:aluno["ocupacao"], email:aluno["email"], senha:"none")
+          matricula = aluno["matricula"]
+            if !Aluno.exists?(matricula: matricula ) #checa se o aluno ja existe pela matricula e cadastra ele caso não exista
+              cria_aluno = Aluno.new(nome:aluno["nome"], curso:aluno["curso"], matricula:matricula, usuario:aluno["usuario"], formacao:aluno["formacao"], ocupacao:aluno["ocupacao"], email:aluno["email"], senha:"none")
               cria_aluno.save
             end
           end
@@ -39,11 +40,10 @@ class TelasController < ApplicationController
   #cadastra o usuario do aluno quando ele escolhe uma senha
   #um Aluno no banco de dados nao pode acessar sua conta, ele precisa clicar no email e criar uma senha para se tornar um User
   def cadastro_aluno
-    @senha = params["senha"]["senha"]
-    @id = params["senha"]["id"]
-
+    @senha, @id = params["senha"].values_at("senha", "id")
+    @aluno = Aluno.find(@id)
     #pega os dados do Aluno e usa para criar um User
-    usuario = User.new(matricula:Aluno.find(@id).matricula, email:Aluno.find(@id).email, password:@senha, password_confirmation:@senha, nome:Aluno.find(@id).nome, adm:"false")
+    usuario = User.new(matricula:@aluno.matricula, email:@aluno.email, password:@senha, password_confirmation:@senha, nome:@aluno.nome, adm:"false")
     usuario.save!
   end
 end
