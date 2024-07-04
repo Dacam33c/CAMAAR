@@ -8,14 +8,18 @@ Rails.application.routes.draw do
   end
 
   get '/gerenciamento', to: 'telas#gerenciamento'
+
   post "cadastro/cadastro_aluno"
-  post 'telas/cadastro_aluno'
+
   get '/tela_alunos', to: 'telas#tela_alunos'
+
   get '/user_home', to: 'telas#user_home'
   get '/user/tela_alunos', to: 'telas#user_home'
 
-  post 'telas/importar'
-  post 'telas/mail'
+  post 'import', to: 'import_methods#importar'
+  post 'importacao/importar'
+  post 'email/mail'
+
   resource :id
   resources :alunos
   resource :senha
