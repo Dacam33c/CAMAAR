@@ -24,8 +24,9 @@ Then ("I should be redirected to gerenciamento") do
     expect(current_url).to eq("http://localhost:3000/gerenciamento")
 end
 
-And ("I should see a welcome message") do 
+And ("I should see a welcome message with my name") do 
     expect(page).to have_content("Gerenciamento")
 
     click_button "Logout"
 end             
+
