@@ -10,4 +10,4 @@ Feature: User Login
         When I enter my correct password
         When I click the Login button
         Then I should be redirected to gerenciamento
-        And I should see a welcome message
+        And I should see a welcome message with my name

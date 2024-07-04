@@ -1,5 +1,6 @@
 Given("I am on Cadastro page") do
     visit 'http://localhost:3000/users/sign_up/1'
+    sleep 3
 end
 
 When("I fill in my password") do
@@ -11,9 +12,5 @@ When("I click the confirmation button") do
 end
 
 Then ("My account should be stored in the database") do
-
-    puts Aluno.all
-    puts User.all
-    
     expect(User.exists?(nome: Aluno.find(9).nome )).to eq(true)
 end
