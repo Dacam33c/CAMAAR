@@ -15,10 +15,6 @@ end
 
 When ("I click the import button") do 
     click_button "Import"
-
-    puts Aluno.all
-    puts "teste"
-
     sleep 10
 end
 

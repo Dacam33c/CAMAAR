@@ -12,5 +12,5 @@ When("I click the confirmation button") do
 end
 
 Then ("My account should be stored in the database") do
-    expect(User.exists?(nome: Aluno.find(9).nome )).to eq(true)
+    expect(User.exists?(nome: Aluno.find(1).nome )).to eq(true)
 end

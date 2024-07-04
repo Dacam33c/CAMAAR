@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   get '/gerenciamento', to: 'telas#gerenciamento'
+  
 
   post "cadastro/cadastro_aluno"
 
