@@ -25,6 +25,6 @@ Rails.application.routes.draw do
   resource :senha
   resources :users
 
-
   get "/confirmar_senha", to: 'telas#cadastro_aluno'
+
 end

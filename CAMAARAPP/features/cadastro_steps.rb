@@ -1,5 +1,5 @@
 Given("I am on Cadastro page") do
-    visit 'http://localhost:3000/users/sign_up/9'
+    visit 'http://localhost:3000/users/sign_up/1'
 end
 
 When("I fill in my password") do
@@ -16,4 +16,21 @@ Then ("My account should be stored in the database") do
     puts User.all
     
     expect(User.exists?(nome: Aluno.find(9).nome )).to eq(true)
+end
+
+
+Given ("I am on Cadastro page") do
+    visit 'http://localhost:3000/users/sign_up/1'
+end
+
+When ("I fill in an invalid password")
+    fill_in "senha_senha", with: "a"
+end
+
+When("I click the confirmation button") do
+    click_button "Confirmar"
+end
+
+Then ("I should recieve a notification")
+    expect(page).to have_content("Login")
 end
