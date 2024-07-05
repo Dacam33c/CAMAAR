@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'questions/create'
   get "/users/sign_up/:id_aluno", to: "telas#cadastro", as:"id_aluno"
 
   devise_for :users 
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
 
   get '/user_home', to: 'telas#user_home'
   get '/user/tela_alunos', to: 'telas#user_home'
+  get '/criar_formulario', to: 'telas#criar_formulario'
 
   post 'import', to: 'import_methods#importar'
   post 'importacao/importar'
@@ -27,5 +29,15 @@ Rails.application.routes.draw do
   resources :users
 
   get "/confirmar_senha", to: 'telas#cadastro_aluno'
+
+  resources :questions, only: [:index, :create] do
+    collection do
+      post :submit
+      get :show_answers
+    end
+  end
+
+  get '/show_answers', to: 'questions#show_answers', as: 'show_answers'
+  post '/submit_questions', to: 'questions#submit'
 
 end

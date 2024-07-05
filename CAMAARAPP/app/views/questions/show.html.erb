@@ -1,0 +1,11 @@
+<h1>Submitted Answers</h1>
+
+<% if @saved_answers.present? %>
+  <ul>
+    <% @saved_answers.each do |answer| %>
+      <li>Question <%= answer.question.content %>: <%= answer.content %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No answers have been submitted.</p>
+<% end %>
