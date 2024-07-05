@@ -1,3 +1,5 @@
+User.create(nome:"maristela",password:"teste1",password_confirmation:"teste1",adm:"true",email:"teste1@gmail.com")
+
 Given("I am on the login page") do
     visit 'http://localhost:3000/'
 end
