@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'questions/create'
   get "/users/sign_up/:id_aluno", to: "telas#cadastro", as:"id_aluno"
 
   devise_for :users 
@@ -23,4 +24,7 @@ Rails.application.routes.draw do
   resources :users
 
   get "/confirmar_senha", to: 'telas#cadastro_aluno'
+
+  resources :questions, only: [:create, :index]
+
 end

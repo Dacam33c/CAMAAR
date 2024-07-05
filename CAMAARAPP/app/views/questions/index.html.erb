@@ -1,0 +1,11 @@
+<h1>Questions</h1>
+
+<% if @questions.any? %>
+  <ul>
+    <% @questions.each do |question| %>
+      <li><%= question.content %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No questions have been added yet.</p>
+<% end %>

@@ -1,36 +1,38 @@
-<body>
+<%= form_with(url: questions_path, method: :post, id: 'questionsForm') do %>
   <div class="outer-container">
-    <%= button_tag 'Adicionar Pergunta', id: 'addTextFieldButton', class: 'btn-custom' %>
+    <%= button_tag 'Adicionar Pergunta', id: 'addTextFieldButton', class: 'btn-custom', type: 'button' %>
     <div id="textFieldsContainer"></div>
-
-    <script>
-      document.getElementById('addTextFieldButton').addEventListener('click', function() {
-        const container = document.getElementById('textFieldsContainer');
-        
-        const fieldContainer = document.createElement('div');
-        fieldContainer.className = 'field-container';
-        
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.className = 'text-field';
-        
-        const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Apagar Pergunta';
-        deleteButton.className = 'btn-delete';
-        deleteButton.addEventListener('click', function() {
-          container.removeChild(fieldContainer);
-        });
-        
-        fieldContainer.appendChild(input);
-        fieldContainer.appendChild(deleteButton);
-        container.appendChild(fieldContainer);
-      });
-
-      window.addEventListener('beforeunload', function (e) {
-        var confirmationMessage = 'Tem certeza de que deseja sair? Todo o conteúdo será perdido.';
-        e.returnValue = confirmationMessage; // Standard for most browsers
-        return confirmationMessage; // For older browsers
-      });
-    </script>
   </div>
-</body>
+  <%= submit_tag 'Save Questions', class: 'btn-custom' %>
+<% end %>
+
+<script>
+  document.getElementById('addTextFieldButton').addEventListener('click', function() {
+    const container = document.getElementById('textFieldsContainer');
+    
+    const fieldContainer = document.createElement('div');
+    fieldContainer.className = 'field-container';
+    
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.className = 'text-field';
+    input.name = 'questions[][content]';  // Update the input name to match the model
+    
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Apagar Pergunta';
+    deleteButton.className = 'btn-custom';  // Adding the same class as the "Adicionar Pergunta" button
+    deleteButton.addEventListener('click', function() {
+      container.removeChild(fieldContainer);
+    });
+    
+    fieldContainer.appendChild(input);
+    fieldContainer.appendChild(deleteButton);
+    container.appendChild(fieldContainer);
+  });
+
+  window.addEventListener('beforeunload', function (e) {
+    var confirmationMessage = 'Tem certeza de que deseja sair? Todo o conteúdo será perdido.';
+    e.returnValue = confirmationMessage; // Standard for most browsers
+    return confirmationMessage; // For older browsers
+  });
+</script>
