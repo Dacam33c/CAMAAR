@@ -54,5 +54,7 @@ alguns membros do grupo tiveram problemas para rodar os testes do cucumber devid
 uma linha de codigo localizada por padrão em C:\Ruby32-x64\lib\ruby\gems\3.2.0\gems\webdrivers-5.2.0\lib\webdrivers/geckodriver impede o funcionamento do webdriver, e eu não consigo descobrir oque ela faz.
 remover a ultima linha do arquivo resolver o erro por algum motivo.
 
+É impossível rodar o saikuro porque a versão mais recente que encontramos é para ruby 2.7 e algumas funcionalidades do programa não funcionam se dermos downgrade na versão dele.
+
 
 
