@@ -5,7 +5,7 @@ Alisson Vieira Neves - 221002067
 João Marcos Melo Monteiro - 130143031
 Lucas da Costa Rodrigues - 221017079
 
-# SPRINT 1
+# SPRINT 3
 
 ### Scrum Master: Lucas da Costa
 ### Product Owner: João Pedro
@@ -26,12 +26,16 @@ Lucas da Costa Rodrigues - 221017079
 ## Política de branching:
 ### branch por funcionalidade
 
+## ruby 3.2.4
+## rails 7.1.3.4
 
 ## Uso:
 adm deve ser definido no cmd
-ex: User.create(nome:"adm1",password:"teste1",password_confirmation:"teste1",adm:"true",email:"teste1@gmail.com")
+ex: 
+rails c
+User.create(nome:"adm1",password:"teste1",password_confirmation:"teste1",adm:"true",email:"teste1@gmail.com")
 
-para acessar o usuário, ir na página "http://localhost:3000/users/sign_in"
+para acessar o usuário, ir na página "http://localhost:3000/"
 inicialmente nao devem haver alunos cadastrados.
 
 ao logar como adm, é enviado para a pagina de gerenciamento, onde é possível importar a base de dados e enviar email aos alunos.
@@ -39,8 +43,14 @@ para evitar spam e emails acidentais, as duas funcionalidades foram separadas e 
 
 após importar os dados dos alunos, a senha pode ser definida em "http://localhost:3000/users/sign_up/*ID*"
 onde ID é substituido pelo id correspondente ao aluno
+esse link com o id é enviado para o email de cada aluno
 
-ao logar é redirecionado para "http://localhost:3000/user_home"
+ao logar como aluno é redirecionado para "http://localhost:3000/user_home"
 
-os testes com cucumber estão falhando pois o webdriver não possui nenhuma versão compativel com o chrome mais recente
+os testes do cucumber estão usando o firefox e assumem que são iniciados com a base de dados vazia.
+Obs: alguns membros do grupo tiveram problemas para rodar os testes do cucumber devido a um erro na pasta raiz do ruby
+     uma linha de codigo localizada por padrão em C:\Ruby32-x64\lib\ruby\gems\3.2.0\gems\webdrivers-5.2.0\lib\webdrivers/geckodriver impede o funcionamento do webdriver, e eu não consigo descobrir oque ela faz.
+     remover a ultima linha do arquivo resolver o erro por algum motivo.
+
+
 
