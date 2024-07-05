@@ -25,6 +25,14 @@ Rails.application.routes.draw do
 
   get "/confirmar_senha", to: 'telas#cadastro_aluno'
 
-  resources :questions, only: [:create, :index]
+  resources :questions, only: [:index, :create] do
+    collection do
+      post :submit
+      get :show_answers
+    end
+  end
+
+  get '/show_answers', to: 'questions#show_answers', as: 'show_answers'
+  post '/submit_questions', to: 'questions#submit'
 
 end

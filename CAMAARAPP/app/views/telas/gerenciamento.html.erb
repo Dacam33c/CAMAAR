@@ -1,15 +1,15 @@
 <body>
-    <div class="outer-container">
-      <div class="inner-container text-center">
-        <h1>Gerenciamento <br> <%= current_user.nome %> </h1>
+  <div class="outer-container">
+    <div class="inner-container text-center">
+      <h1>Gerenciamento <br> <%= current_user.nome %> </h1>
 
-        <div class="buttons">
-          <%= button_to "Import", "/telas/importar", method: :post, class: 'btn-custom' %>
-          <%= button_to "Mail", "/telas/mail", method: :post, class: 'btn-custom' %>
-          <%= link_to "Create Form", "criar_formulario", class: 'btn btn-custom' %>
-          <%= link_to "View Questions", questions_path, class: 'btn btn-custom' %>
-          <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn-custom' %>
-        </div>
+      <div class="buttons">
+        <%= button_to "Import", "/telas/importar", method: :post, class: 'btn-custom' %>
+        <%= button_to "Mail", "/telas/mail", method: :post, class: 'btn-custom' %>
+        <%= link_to "Create Form", "criar_formulario", class: 'btn btn-custom' %>
+        <%= link_to "View Answers", show_answers_path, class: 'btn btn-custom' %>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn-custom' %>
       </div>
     </div>
-  </body>
+  </div>
+</body>

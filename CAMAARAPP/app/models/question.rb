@@ -1,2 +1,3 @@
 class Question < ApplicationRecord
-end
+    has_many :answers, dependent: :destroy
+  end  

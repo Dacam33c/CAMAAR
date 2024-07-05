@@ -1,11 +1,14 @@
 <h1>Questions</h1>
 
-<% if @questions.any? %>
-  <ul>
-    <% @questions.each do |question| %>
-      <li><%= question.content %></li>
-    <% end %>
-  </ul>
+<% if @questions.present? %>
+  <%= form_with url: submit_questions_path, method: :post do %>
+    <ul>
+      <% @questions.each_with_index do |question, index| %>
+        <li><%= question.content %></li>
+      <% end %>
+    </ul>
+    <%= submit_tag "Submit" %>
+  <% end %>
 <% else %>
   <p>No questions have been added yet.</p>
 <% end %>
