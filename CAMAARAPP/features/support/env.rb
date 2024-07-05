@@ -27,6 +27,9 @@ require 'webdrivers'
 #
 ActionController::Base.allow_rescue = false
 
+require 'simplecov'
+SimpleCov.start
+
 # Remove/comment out the lines below if your app doesn't have a database.
 # For some databases (like MongoDB and CouchDB) you may need to use :truncation instead.
 begin

@@ -419,6 +419,7 @@ DEPENDENCIES
   rubycritic
   sassc-rails
   selenium-webdriver
+  simplecov
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
