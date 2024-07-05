@@ -49,6 +49,7 @@ ao logar como aluno é redirecionado para "http://localhost:3000/user_home"
 
 os testes do cucumber estão usando o firefox e assumem que são iniciados com a base de dados vazia.
 Obs: alguns membros do grupo tiveram problemas para rodar os testes do cucumber devido a um erro na pasta raiz do ruby
+
      uma linha de codigo localizada por padrão em C:\Ruby32-x64\lib\ruby\gems\3.2.0\gems\webdrivers-5.2.0\lib\webdrivers/geckodriver impede o funcionamento do webdriver, e eu não consigo descobrir oque ela faz.
      remover a ultima linha do arquivo resolver o erro por algum motivo.
 
