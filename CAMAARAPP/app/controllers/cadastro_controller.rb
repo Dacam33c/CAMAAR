@@ -1,3 +1,4 @@
+#classe para cadastrar usuario
 class CadastroController < ApplicationController
 
   #cadastra o usuario do aluno quando ele escolhe uma senha

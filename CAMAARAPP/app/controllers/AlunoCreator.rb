@@ -1,5 +1,6 @@
 #cria o Aluno
 class AlunoCreator
+  #pega todos os dados do aluno
   def self.create(aluno_params)
     Aluno.new(
       nome: aluno_params["nome"],

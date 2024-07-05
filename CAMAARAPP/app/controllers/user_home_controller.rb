@@ -1,3 +1,4 @@
+#classe para a view do aluno
 class UserHomeController < ApplicationController
   
   #definindo os dados que precisamos na view do aluno

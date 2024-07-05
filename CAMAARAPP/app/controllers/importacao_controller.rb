@@ -1,7 +1,7 @@
-#importação dos dados dos alunos
 require_relative "JsonParser"
 require_relative "TurmaImporter"
 
+#importação dos dados dos alunos
 class ImportacaoController < ApplicationController
 
   # Importação dos dados pelo JSON
