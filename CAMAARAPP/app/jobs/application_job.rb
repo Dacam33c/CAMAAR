@@ -1,3 +1,4 @@
+#arquivo padrão do rails
 class ApplicationJob < ActiveJob::Base
   # Automatically retry jobs that encountered a deadlock
   # retry_on ActiveRecord::Deadlocked
