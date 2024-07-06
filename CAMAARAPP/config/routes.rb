@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   get '/gerenciamento', to: 'telas#gerenciamento'
-  
+  get 'telas/criar_formulario', to: 'telas#criar_formulario', as: 'criar_formulario'
 
   post "cadastro/cadastro_aluno"
 
