@@ -6,6 +6,7 @@
       <div class="buttons">
         <%= button_to "Import", "/telas/importar", method: :post, class: 'btn-custom' %>
         <%= button_to "Mail", "/telas/mail", method: :post, class: 'btn-custom' %>
+        <%= button_to "Create Form", "/telas/criar_formulario", method: :get, class: 'btn btn-custom' %>
         <%= link_to "View Answers", show_answers_path, class: 'btn btn-custom' %>
         <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn-custom' %>
       </div>
