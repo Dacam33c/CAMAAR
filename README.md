@@ -28,6 +28,7 @@ Lucas da Costa Rodrigues - 221017079
 
 ## ruby 3.2.4
 ## rails 7.1.3.4
+## Node.js 12.x ou superior
 
 ## Uso:
 adm deve ser definido no cmd
