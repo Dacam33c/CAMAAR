@@ -1,7 +1,13 @@
 <%= form_with(url: questions_path, method: :post, id: 'questionsForm') do %>
   <div class="outer-container">
     <%= button_tag 'Adicionar Pergunta', id: 'addTextFieldButton', class: 'btn-custom', type: 'button' %>
+  <div class="outer_form-container">
+    
     <div id="textFieldsContainer"></div>
+    <%= button_tag 'Adicionar Pergunta', id: 'addTextFieldButton', class: 'btn-custom', type: 'button' %>
+  </div>
+  <div class="actions">
+    <%= submit_tag 'Salvar Perguntas', class: 'btn-custom' %>
   </div>
   <%= submit_tag 'Save Questions', class: 'btn-custom' %>
 <% end %>
@@ -21,6 +27,7 @@
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Apagar Pergunta';
     deleteButton.className = 'btn-custom';  // Adding the same class as the "Adicionar Pergunta" button
+    deleteButton.className = 'btn-delete';
     deleteButton.addEventListener('click', function() {
       container.removeChild(fieldContainer);
     });

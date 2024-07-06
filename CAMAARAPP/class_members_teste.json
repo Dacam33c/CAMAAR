@@ -11,16 +11,13 @@
                 "usuario": "221017032",
                 "formacao": "graduando",
                 "ocupacao": "dicente",
-                "email": "dacam33c@gmail.com"
             },
             {
-                "nome": "alisso",
                 "curso": "CIÊNCIA DA COMPUTAÇÃO/CIC",
                 "matricula": "221017033",
                 "usuario": "221017033",
                 "formacao": "graduando",
                 "ocupacao": "dicente",
-                "email": "dacam33c@gmail.com"
             },
             {
                 "nome": "otro joao",
@@ -29,7 +26,6 @@
                 "usuario": "221017034",
                 "formacao": "graduando",
                 "ocupacao": "dicente",
-                "email": "dacam33c@gmail.com"
             },
             {
                 "nome": "lucas",
@@ -38,7 +34,6 @@
                 "usuario": "221017035",
                 "formacao": "graduando",
                 "ocupacao": "dicente",
-                "email": "dacam33c@gmail.com"
             }
 
         ],
